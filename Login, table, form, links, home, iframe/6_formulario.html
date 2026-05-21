@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formularios</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		#nombre
+		{
+			background-color: yellow;
+			color: red;
+			border: 5px blue solid;
+		}
+
+		table,td
+		{
+			border: 1px solid;
+			background-color: #fae7b5;
+		}
+		body
+		{
+			background:url(fondo.jpg); 
+			
+			/*si la imagen de fondo es pequeña, evita su repeticion como si fuese un mosaico*/
+			background-repeat: no-repeat;
+			
+			/*el valor cover hace que el fondo se expanda a toda la pantalla*/
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	
+	<!-- 
+		action: indica la pagina destino cuando envio los datos haciendo click en el boton de submit 
+		
+		maxlength: indica la cantidad maxima de caracteres q se puede escribir en el input
+		
+		type ="password" hace que al ingresar caracteres, se vean bullets, o sea, oculta la contraseña.
+		
+		Para que los radiobuttons esten relacionados entre si y se los pueda elegir en forma excluyente, 
+		el atributo name de todos los radiobuttons debe ser el mismo.
+
+		rows: es la cantidad de filas del texarea o area de texto.
+		cols: es la cantidad de columnas del texarea o area de texto.
+		placeholder: muestra un leyenda para quie el usuario sepa que escribir en ese elemento.
+
+	-->
+
+
+	<form name="f1" action="destino.html">
+		<table>
+			<tr>
+				<td>Nombre: </td>
+				<td><input type="text" id="nombre" size="40" maxlength="10" /></td>
+			</tr>
+			<tr>
+				<td>Clave: </td>
+				<td><input type="password" id="clave" /></td>
+			</tr>
+			<tr>
+				<td>Formas De Pago: </td>
+				<td><input type="radio" name="pago" id="efectivo">
+					<label for="efectivo">Efectivo</label>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="radio" name="pago" id="tarjeta">Tarjeta</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="radio" name="pago" id="debito">Debito</td>
+			</tr>
+			<tr>
+				<td>Temas de Interes:</td>
+				<td><input type="checkbox" name="temas" id="musica">Musica</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="checkbox" name="temas" id="viajes">Viajes</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="checkbox" name="temas" id="cine">Cine</td>
+			</tr>
+			<tr>
+				<td>Pais:</td>
+				<td>
+					<select name="paises" id="paises" style="width:200px;">
+						<option value="">Seleccione Pais</option>
+						<option value="arg">Argentina</option>
+						<option value="ven">Venezuela</option>
+						<option value="bra">Brasil</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">Comentarios:</td>
+				<td>
+					<textarea name="comentarios" id="comentarios" rows="10" cols="40" placeholder="Escriba aqui su comentario..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="Enviar Datos" />
+					<input type="reset"  value="Cancelar Envio" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

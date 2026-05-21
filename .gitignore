@@ -1,0 +1,10 @@
+# Configuración local con contraseñas
+config.php
+config1.php
+
+# Archivos temporales de sistemas o editores
+.env
+__pycache__/
+.vscode/
+.DS_Store
+thumbs.db

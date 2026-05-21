@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Formulario</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		sup
+		{
+			color: #f33;
+		}
+	</style>
+</head>
+<body>
+	<!-- name: nombre con el cual el servidor identifica d eque etiqueta recibe los datos -->
+	<!-- ID: identificador para el navegador, para HTML, CSS y JavaScript -->
+	<!-- etiqueta label: sirve para que al hacer click en la palabra que acompaña al input, el cursor
+		se pare sobre ese elemento-->
+	<form>
+		<label for="nombre">Nombre: <sup>*</sup></label>
+		<input type="text" name="nombre" id="nombre"  title="Acá debés ingresar tu nombre REAL" required><br>
+
+		<label for="apellido">Apellido: </label>
+		<input type="text" name="apellido" id="apellido" placeholder="Ingresá aquí tu apellido" title="bla bla"><br>
+		
+		<!-- atributo autofocus: al cargar la pagina o refrescarla el cursor se para sobre este elemento -->
+		<label for="usuario">Usuario: </label>
+		<input type="text" name="usuario" id="usuario" autofocus title="Ingresá un usuario para acceder al servicio"><br>
+
+		<label for="tel">Tel:</label>
+		<input type="tel" name="tel" id="tel"><br>
+
+		<label for="mail">Mail:</label>
+		<input type="email" name="mail" id="mail"><br>
+
+		<label for="direccionweb">Dirección web:</label>
+		<input type="url" name="direccionweb" id="direccionweb" value="http://" placeholder="http://www.tusitio.com" title="¿¿No falta el http://??"><br>
+
+		<label for="edad">Edad: <sup>*</sup></label>
+		<input type="number" name="edad" id="edad" required min="0" max="120"><br>
+
+		<label for="importe">Importe: </label>
+		<input type="number" name="importe" id="importe" step="0.25" min="0" max="120"><br>
+
+		<label for="color">Color:</label>
+		<input type="color" name="color" id="color"><br>
+
+		<label for="cantidentradas">Cantidad de entradas 2x1: </label>
+		<input type="number" name="cantidentradas" id="cantidentradas" step="2" min="0" max="8" value="4"><br>
+
+		<label for="hora">Hora:</label>
+		<input type="time" name="hora" id="hora" value="17:43"><br>
+
+		<label for="fecha">Fecha:</label>
+		<input type="date" name="fecha" id="fecha"><br>
+
+		<label for="fechayhora">Fecha y hora:</label>
+		<input type="datetime-local" name="fechayhora" id="fechayhora"><br>
+
+		
+		<label for="conformidad">¿Qué tan conforme estás con nuestros servicios? </label><br>
+
+		Muy poco conforme
+		<input type="range" name="conformidad" value="15" step="5" id="conformidad" min="0" max="20">
+		Muy conforme
+		<br>
+
+		
+		<label for="buscar">Buscar</label>
+		<input type="search" name="buscar" id="buscar"><br>
+
+		<label for="contrasena">Contraseña</label>
+		<input type="password">
+		<br>
+
+
+		<p><sup>*</sup>: datos obligatorios.</p>
+
+		<input type="submit" value="Enviar los datos">
+		<input type="reset" value="Cancelar el envio">
+
+
+	</form>
+</body>
+</html>
